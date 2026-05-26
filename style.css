@@ -13,7 +13,7 @@ html {
 }
 
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -21,11 +21,12 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
     background: linear-gradient(to bottom,
             rgba(0, 0, 0, 0.65),
             rgba(0, 0, 0, 0.15),
             transparent);
+    
 }
 
 .logo {
@@ -54,8 +55,6 @@ html {
     color: #9c7b57;
 }
 
-/* principal */
-
 .principal-container {
     height: 100vh;
     position: relative;
@@ -64,7 +63,6 @@ html {
     padding: 0 8%;
     overflow: hidden;
 }
-
 
 .principal-image {
     position: absolute;
@@ -185,7 +183,6 @@ html {
     color: #dbdad9;
 }
 
-/* SEÇÕES */
 .titulo-beneficios {
     text-align: center;
     margin-bottom: 60px;
@@ -264,8 +261,6 @@ html {
     font-size: 0.9rem;
 }
 
-/* BENEFÍCIOS */
-
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -275,11 +270,8 @@ html {
 .card {
     background: white;
     padding: 35px;
-
     border-radius: 16px;
-
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
     transition: 0.3s;
 }
 
@@ -291,8 +283,6 @@ html {
     margin-bottom: 15px;
     color: #9c7b57;
 }
-
-/* SOBRE */
 
 .sobre-container {
     width: fit-content;
@@ -324,10 +314,6 @@ html {
 
 }
 
-
-
-/* DEPOIMENTOS */
-
 .mensagens {
     background: white;
 }
@@ -340,15 +326,10 @@ html {
 
 .mensagem {
     padding: 35px;
-
     border-radius: 16px;
-
     background: #f9fafb;
-
     border-left: 5px solid #cf8c42;
 }
-
-/*CARDS*/
 
 .titulo-card {
     margin-top: 30px;
@@ -406,7 +387,6 @@ html {
     height: 360px;
     padding: 10px 10px 10px 10px;
     width: 230px;
-
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
         0 0 12px rgba(116, 115, 114, 0.1);
     transition: 0.3s;
@@ -432,8 +412,6 @@ html {
     margin: 0 auto;
 
 }
-
-/* CONTATO */
 
 .contact-container {
     display: grid;
@@ -500,8 +478,6 @@ html {
 
 }
 
-/* FOOTER */
-
 .footer {
     background: #111827;
     color: white;
@@ -530,27 +506,222 @@ html {
     text-align: center;
 }
 
-/* RESPONSIVO */
 
-@media(max-width: 900px) {
+@media (max-width: 1200px) {
+
+    .sobre-container {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .imagem-sobre img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container-card {
+        grid-template-columns: repeat(3, 220px);
+        gap: 40px;
+    }
+
+    .depoimentos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .numeros {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 992px) {
+
+
+    .header {
+        padding: 20px 5%;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+
+    .principal h1 {
+        font-size: 3rem;
+        width: 100%;
+    }
+
+    .principal p {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .numeros {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 50vh;
+        text-align: center;
+        gap: 20px;
+    }
+
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .texto-sobre {
+        padding: 20px;
+    }
+
+    .mensagem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container-card {
+        grid-template-columns: repeat(2, 230px);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 768px) {
 
     .menu {
         display: none;
     }
 
-    .principal-content h1 {
-        font-size: 2.8rem;
+    .header {
+        padding: 18px 5%;
     }
 
-    .cards,
-    .about,
-    .mensagem -grid,
-    .contact-container {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .principal-container {
+        padding: 0 5%;
+    }
+
+    .principal h1 {
+        font-size: 2.5rem;
+    }
+
+    .principal p {
+        font-size: .95rem;
+        width: 300px;
+    }
+
+    .botao1,
+    .botao2 {
+        padding: 12px 22px;
+        font-size: .9rem;
+        width: 290px;
+    }
+
+    .botao2{
+        margin-top: 20px;
+    }
+
+    .numeros {
+        grid-template-columns: 1fr;
+        margin-top: 55vh;
+    }
+
+    .titulo-beneficios h2,
+    .texto-sobre h2,
+    .contact-texto h2,
+    .titulo-depoimento h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
         grid-template-columns: 1fr;
     }
 
-    section {
-        padding: 70px 5%;
+    .card {
+        padding: 25px;
+    }
+
+    .container-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-compra {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .botao-card {
+        width: 100%;
+    }
+
+    .valor {
+        margin-left: 0;
+    }
+
+    .sobre-container {
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .imagem-sobre img {
+        padding: 0;
+        border-radius: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .principal h1 {
+        font-size: 2rem;
+    }
+
+    .principal p {
+        font-size: .9rem;
+    }
+
+    .titulo-beneficios h2,
+    .texto-sobre h2,
+    .contact-texto h2,
+    .titulo-depoimento h2 {
+        font-size: 1.7rem;
+    }
+
+    .contact-container {
+        padding: 40px 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: .9rem;
+    }
+
+    .footer {
+        padding: 50px 5% 20px;
+    }
+
+    .numeros h2 {
+        font-size: 2rem;
     }
 
 }
