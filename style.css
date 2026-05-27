@@ -132,56 +132,6 @@ html {
     color: #9c7b579d;
 }
 
-.botao1 {
-    padding: 15px 30px;
-    color: rgb(64, 51, 28);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    transition: 0.3s;
-    background: transparent;
-    border: 2px solid;
-    border-color: linear-gradient(135deg,
-            #f59e0b,
-            #facc15,
-            #ffffff,
-        ) 1;
-}
-
-.botao2 {
-    border: 2px solid;
-    padding: 15px 30px;
-    color: rgb(64, 51, 28);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    transition: 0.3s;
-    background: transparent;
-    border: 2px solid;
-    border-color: #fff;
-    background-color: #fff;
-}
-
-.botao2 i {
-    transform: rotate(-150deg);
-    margin-left: 10px;
-
-
-}
-
-.botao1:hover {
-    background: transparent;
-    border: 2px solid;
-    border-color: #9c7b57;
-    color: #9c7b57;
-}
-
-.botao2:hover {
-    background: #9c7b57;
-    border: 2px solid;
-    border-color: #9c7b57;
-    color: #dbdad9;
-}
 
 .titulo-beneficios {
     text-align: center;
@@ -531,10 +481,6 @@ html {
         grid-template-columns: 1fr;
     }
 
-    .numeros {
-        margin-left: 0;
-        justify-content: center;
-    }
 
 }
 
@@ -559,13 +505,6 @@ html {
     .principal p {
         width: 100%;
         font-size: 1rem;
-    }
-
-    .numeros {
-        grid-template-columns: repeat(3, 1fr);
-        margin-top: 50vh;
-        text-align: center;
-        gap: 20px;
     }
 
 
@@ -622,22 +561,6 @@ html {
     .principal p {
         font-size: .95rem;
         width: 300px;
-    }
-
-    .botao1,
-    .botao2 {
-        padding: 12px 22px;
-        font-size: .9rem;
-        width: 290px;
-    }
-
-    .botao2{
-        margin-top: 20px;
-    }
-
-    .numeros {
-        grid-template-columns: 1fr;
-        margin-top: 55vh;
     }
 
     .titulo-beneficios h2,
@@ -720,36 +643,7 @@ html {
         padding: 50px 5% 20px;
     }
 
-    .numeros h2 {
-        font-size: 2rem;
-    }
+
 
 }
 
-.numeros {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-    gap: 30px;
-    z-index: 2;
-    color: #f9fafb;
-    margin-left: 50vh;
-    margin-top: 60vh;
-
-}
-
-.numeros h2 {
-    color: #fff;
-    font-size: 3rem;
-}
-
-.numTexto {
-    margin-top: -9px;
-    font-weight: 200;
-}
-
-.linha {
-    width: 150px;
-    background-color: #ffffff51;
-    height: 1px;
-    margin-top: 5px;
-}
